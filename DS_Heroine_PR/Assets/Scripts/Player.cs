@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public IPlayerState mCurrentState;
+    public GameObject pyrimid;
 
     private void Awake()
     {

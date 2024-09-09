@@ -25,5 +25,27 @@ public class StandingPlayerState : IPlayerState
             DuckingPlayerState duckingState = new DuckingPlayerState();
             duckingState.Enter(player);
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // transition to hide
+            HidePlayerState hideingState = new HidePlayerState();
+            hideingState.Enter(player);
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // transition to jump scare
+            JumpScarePlayerState jumpScarePlayerState = new JumpScarePlayerState();
+            jumpScarePlayerState.Enter(player);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // transition to build
+            BuildPlayerState buildingState = new BuildPlayerState();
+            buildingState.Enter(player);
+        }
     }
 }
